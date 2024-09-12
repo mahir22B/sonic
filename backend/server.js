@@ -650,6 +650,10 @@ const upload = multer({
   limits: { fileSize: 10 * 1024 * 1024 } // 10 MB limit
 });
 
+app.get('/', (req, res) => {
+    res.send('Backend Deployed');
+  });
+
 const pdfExtract = new PDFExtract();
 const options = {}; // PDF extract options
 
