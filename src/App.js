@@ -12,6 +12,7 @@ function App() {
   const [claudeKey, setClaudeKey] = useState('');
   const [elevenLabsKey, setElevenLabsKey] = useState('');
   const [apiKeysMissing, setApiKeysMissing] = useState(true);
+  
 
   useEffect(() => {
     setApiKeysMissing(!claudeKey || !elevenLabsKey);
@@ -52,7 +53,7 @@ function App() {
     formData.append('elevenLabsKey', elevenLabsKey);
 
     try {
-      const response = await axios.post('http://localhost:3001/api/process', formData, {
+      const response = await axios.post('https://stingray-app-2ni23.ondigitalocean.app/api/process', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
         responseType: 'arraybuffer'
       });
