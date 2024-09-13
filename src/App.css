@@ -344,3 +344,25 @@ h2 {
 .modal-buttons button:hover {
   background-color: #a67c00;
 }
+
+.process-stage {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.loading-dots:after {
+  content: '...';
+  animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% {
+    content: '..';
+  }
+  40% {
+    content: '....';
+  }
+  60%, 100% {
+    content: '......';
+  }
+}
