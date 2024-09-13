@@ -53,17 +53,17 @@ function App() {
     formData.append("elevenLabsKey", elevenLabsKey);
 
     const stages = [
-      "Extracting text from PDF...",
-      "Generating dialogue from text...",
-      "Creating speech from dialogue...",
-      "Finalizing podcast...",
+      "Extracting text from PDF",
+      "Generating dialogue from text",
+      "Creating speech from dialogue",
+      "Finalizing podcast",
     ];
 
     try {
       for (let i = 0; i < stages.length; i++) {
         setProcessStages((prevStages) => [...prevStages, stages[i]]);
         if (i < stages.length - 1) {
-          await new Promise((resolve) => setTimeout(resolve, 10000));
+          await new Promise((resolve) => setTimeout(resolve, 15000));
         }
       }
 
