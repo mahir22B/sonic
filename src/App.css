@@ -346,8 +346,46 @@ h2 {
 }
 
 .process-stage {
-  margin: 10px 0;
-  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.icon-wrapper.active {
+  background-color: #4CAF50;
+  animation: pulse 1.5s infinite;
+}
+
+.icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+.active svg {
+  stroke: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
 }
 
 .loading-dots:after {
@@ -357,12 +395,12 @@ h2 {
 
 @keyframes dots {
   0%, 20% {
-    content: '....';
+    content: '.';
   }
   40% {
-    content: '......';
+    content: '..';
   }
   60%, 100% {
-    content: '........';
+    content: '...';
   }
 }
