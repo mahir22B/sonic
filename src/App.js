@@ -116,6 +116,7 @@ function App() {
 
   const processInput = async (file, url) => {
     setLoading(true);
+    setProcessStages([]);
     const formData = new FormData();
     if (file) formData.append("file", file);
     if (url) formData.append("url", url);
